@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "chrome-weixin-data",
+  "description": "This is a project to get data from wexin backen platform",
+  "browser_action": {
+    "default_icon": "icon.jpg",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://a.weixin.qq.com/*"],
+    "js": ["scripts/content.js"]
+  }],
+  "permissions": [
+    "activeTab",
+    "https://*/*",
+    "http://*/*",
+    "cookies",
+    "notifications",
+    "background",
+    "webRequest",
+    "tabs"
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["background/background.js"]
+  }
+}

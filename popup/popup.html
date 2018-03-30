@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>popup</title>
+  <style>
+    .config {
+      padding: 10px;
+    }
+    .config label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    .config select {
+      padding: 5px 10px;
+      border: solid 1px rgba(0, 0, 0, 0.5)
+    }
+    .config input {
+      padding: 5px 10px;
+      border: none;
+    }
+    #ENV {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form class="config">
+    <label for="ENV">环境</label>
+    <select id="ENV" value='' name='env'>
+      <option value="PRODUCTION">线上</option>
+      <option value="TEST">测试</option>
+    </select>
+    <input type="submit" name="提交">
+  </form>
+  <script src='./popup.js'></script>
+</body>
+</html>
